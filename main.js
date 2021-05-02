@@ -10,7 +10,8 @@ function fibonacci1(a){
     console.log(add);
 }
 
-console.log("this code works in chrome terminal")
+
+console.log("This code works in chrome terminal");
 let number1 = prompt("put a number: ");
 var number =parseInt(number1);
 console.log("the secuence of Fibonacci are:");
