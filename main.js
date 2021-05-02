@@ -22,5 +22,6 @@ rl.question(("put a number: "), (number1) => {
     var number =parseInt(number1);
     console.log("The secuence of Fibonacci are:");
     fibonacci1(number);
+    console.log()
     rl.close();
   });
