@@ -1,3 +1,10 @@
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
 function fibonacci1(a){
     console.log(a);
     add= a+a;
@@ -10,9 +17,10 @@ function fibonacci1(a){
     console.log(add);
 }
 
-
-console.log("This code works in chrome terminal");
-let number1 = prompt("put a number: ");
-var number =parseInt(number1);
-console.log("the secuence of Fibonacci are:");
-fibonacci1(number);
+rl.question(("put a number: "), (number1) => {
+    
+    var number =parseInt(number1);
+    console.log("The secuence of Fibonacci are:");
+    fibonacci1(number);
+    rl.close();
+  });
