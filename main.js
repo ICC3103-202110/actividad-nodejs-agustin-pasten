@@ -6,15 +6,27 @@ const rl = readline.createInterface({
 });
 
 function fibonacci1(a){
-    console.log(a);
-    add= a+a;
-    console.log(add);
-    add2 = add +a;
-    console.log(add2);
-    add3 = add + add2
-    console.log(add3);
-    add = add2 + add3;
-    console.log(add);
+    if (a==0){
+        console.log(a);
+    }
+    if (a==1){
+        console.log(a);
+    }
+    if(a>1){
+        var x1 = 0
+        var x2 = 1
+        add = x1 + x2
+        var value = 0
+        for (let i=0; i < a-1; i++) {
+            add2 = x2 + add
+            x2 = add
+            value =add
+            add = add2
+        }
+        console.log(value)
+    }
+        
+   
 }
 
 rl.question(("put a number: "), (number1) => {
@@ -22,6 +34,6 @@ rl.question(("put a number: "), (number1) => {
     var number =parseInt(number1);
     console.log("The secuence of Fibonacci are:");
     fibonacci1(number);
-    console.log()
+
     rl.close();
   });
